@@ -33,7 +33,6 @@
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
-
     <a-scene
       vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
@@ -46,20 +45,13 @@
         url="./public/nft/cms/cms"
         smooth="true"
         smoothCount="10"
-        smoothTolerance="0.01"
+        smoothTolerance=".01"
         smoothThreshold="5"
       >
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <!--<a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>-->
       </a-nft>
       <!-- static camera that moves according to the device movements -->
       <a-entity camera></a-entity>
     </a-scene>
-
-    <script>
-        let elements = document.querySelectorAll('.arjs-loader');
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'none';
-        }
-     </script>
   </body>
 </html>
